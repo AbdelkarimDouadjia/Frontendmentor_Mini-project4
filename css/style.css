@@ -1,0 +1,184 @@
+/* Start Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(217, 54%, 11%);
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+/* Start Main */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  box-shadow: -3px 8px 20px 20px hsl(217, 54%, 10%);
+}
+
+.card .image {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* active state */
+.card .image:hover::before {
+  content: url(../images/icon-view.svg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 2;
+}
+.card .image:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsl(178, 100%, 50%);
+  opacity: 0.4;
+  width: 100%;
+  height: calc(100% - 3px);
+  z-index: 1;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.card .content .title h1 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+/* active state */
+.card .content .title:hover h1 {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.card .content .description p {
+  font-size: 15px;
+  color: hsl(215, 51%, 70%);
+  margin: 15px 0;
+  font-weight: 400;
+  line-height: 1.8;
+}
+.card .content .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+.card .content .info div {
+  display: flex;
+  align-items: center;
+}
+.card .content .info .price {
+  color: hsl(178, 100%, 50%);
+  font-weight: 600;
+}
+.card .content .info .price img {
+  width: 8px;
+  margin-right: 5px;
+}
+
+.card .content .info .time {
+  color: hsl(215, 51%, 70%);
+  font-weight: 400;
+}
+.card .content .info .time img {
+  width: 13px;
+  margin-right: 5px;
+}
+
+.card hr {
+  margin: 15px 0 15px;
+  border: 0;
+  border-width: 0.5px;
+  border-style: solid;
+  border-color: hsl(215, 32%, 27%);
+}
+.card .creator {
+  display: flex;
+  align-items: center;
+}
+.card .creator img {
+  width: 30px;
+  border: 1.5px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-right: 10px;
+}
+.card .creator p {
+  color: hsl(215, 51%, 70%);
+  font-size: 18px;
+}
+.card .creator p span {
+  color: hsl(0, 0%, 100%);
+  font-weight: 300;
+}
+
+/* active state */
+.card .creator p span:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+/* End Main */
